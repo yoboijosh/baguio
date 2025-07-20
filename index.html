@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Baguio City</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .spot-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-blue-800 text-white shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold">Baguio<span class="text-yellow-300">City</span></div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-yellow-300 transition">Home</a>
+                    <a href="#spots" class="hover:text-yellow-300 transition">Tourist Spots</a>
+                    <a href="#about" class="hover:text-yellow-300 transition">About</a>
+                    <a href="#contact" class="hover:text-yellow-300 transition">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                    <a href="#home" class="block px-3 py-2 hover:bg-blue-700 rounded-md">Home</a>
+                    <a href="#spots" class="block px-3 py-2 hover:bg-blue-700 rounded-md">Tourist Spots</a>
+                    <a href="#about" class="block px-3 py-2 hover:bg-blue-700 rounded-md">About</a>
+                    <a href="#contact" class="block px-3 py-2 hover:bg-blue-700 rounded-md">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative overflow-hidden">
+        <div class="relative h-96 md:h-screen max-h-screen">
+            <img src="c:\Users\rhyno\Downloads\ChatGPT Image Jul 20, 2025, 03_34_40 PM.png" alt="Panoramic view of Baguio City with pine trees and mountain scenery" class="w-full h-full object-cover brightness-75">
+            <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
+                <div class="text-center px-4">
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Welcome to Baguio City</h1>
+                    <p class="text-xl md:text-2xl text-white mb-8">The Summer Capital of the Philippines</p>
+                    <a href="#spots" class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-3 px-6 rounded-full transition shadow-lg">Explore Spots</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tourist Spots Section -->
+    <section id="spots" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-12">Popular Tourist Spots</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Burnham Park -->
+                <a href="burnham_park.html" class="spot-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="overflow-hidden h-64">
+                        <img src="c:\Users\rhyno\Downloads\Afternoon at the Burnham Park in the PH Summer Capital.jpg" alt="Burnham Park with its iconic lake surrounded by pine trees and colorful boats" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Burnham Park</h3>
+                        <p class="text-gray-600 mb-4">The green heart of Baguio with a lagoon perfect for boating activities.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span>Distance: Downtown area</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Mines View Park -->
+                <a href="minesview_park.html" class="spot-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="overflow-hidden h-64">
+                        <img src="c:\Users\rhyno\Downloads\Mines View, Baguio Philippines 🇵🇭 (1).jpg" alt="Mines View Park with panoramic mountain views and colorful Igorot costumes" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Mines View Park</h3>
+                        <p class="text-gray-600 mb-4">Offers breathtaking views of the abandoned gold and copper mines.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span>Distance: 3.5km from Downtown</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- The Mansion -->
+                <a href="the_mansion.html" class="spot-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="overflow-hidden h-64">
+                        <img src="c:\Users\rhyno\Downloads\The mansion.jpg" alt="The Mansion House official residence of the Philippine President in Baguio" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">The Mansion</h3>
+                        <p class="text-gray-600 mb-4">Official summer residence of the President of the Philippines.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span>Distance: 2km from Downtown</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Diplomat Hotel -->
+                <a href="diplomat_hotel.html" class="spot-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="overflow-hidden h-64">
+                        <img src="c:\Users\rhyno\Downloads\b7be1246-325c-46dc-a1ce-fbb4db46fcae.jpg" alt="Abandoned Diplomat Hotel with Gothic architecture on a hilltop in Baguio" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Diplomat Hotel</h3>
+                        <p class="text-gray-600 mb-4">Historic abandoned hotel with Gothic architecture and panoramic views.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span>Distance: 5km from Downtown</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Strawberry Farm -->
+                <a href="strawberry_farm.html" class="spot-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="overflow-hidden h-64">
+                        <img src="c:\Users\rhyno\Downloads\18583248-b496-4cf9-8df7-c02371fc60f8.jpg" alt="Strawberry Farm in La Trinidad with rows of strawberry plants and harvesters" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Strawberry Farm</h3>
+                        <p class="text-gray-600 mb-4">Famous for strawberry picking with fresh produce available.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span>Distance: 7km from Downtown</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Igorot Stone Kingdom -->
+                <a href="igorot_stone_kingdom.html" class="spot-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="overflow-hidden h-64">
+                        <img src="c:\Users\rhyno\Downloads\Igorot Stone Kingdom Baguio_ How to Get There + Travel Guide (1).jpg" alt="Igorot Stone Kingdom with terraced stone walls and cultural displays" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Igorot Stone Kingdom</h3>
+                        <p class="text-gray-600 mb-4">Cultural theme park showcasing Igorot heritage and stone-walled terraces.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span>Distance: 4km from Downtown</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <div class="rounded-lg overflow-hidden shadow-lg">
+                        <img src="c:\Users\rhyno\Downloads\e8890492-c11d-4472-b9b3-b9550ac9d362.jpg" alt="Panoramic view of Baguio City showing pine trees and urban landscape blending together" class="w-full h-auto">
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-blue-800 mb-6">About Baguio City</h2>
+                    <p class="text-gray-700 mb-4">Baguio, officially the City of Baguio, is a 1st-class highly urbanized city in the Cordillera Administrative Region, Philippines. It is known as the "Summer Capital of the Philippines" due to its cool climate.</p>
+                    <p class="text-gray-700 mb-4">Established as a hill station by the Americans in the early 1900s, Baguio sits approximately 1,500 meters (4,900 feet) above sea level, nestled within the Cordillera Central mountain range in northern Luzon.</p>
+                    <p class="text-gray-700">The city is rich in cultural heritage, blending indigenous Igorot traditions with Spanish and American colonial influences, making it a unique destination for both local and international tourists.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-12">Visit Baguio City</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">Best Time to Visit</h3>
+                    <p class="text-gray-700">December to February for the coolest temperatures, or April for the Panagbenga Flower Festival.</p>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">Getting There</h3>
+                    <p class="text-gray-700">Buses from Manila take 4-6 hours. Fly to Loakan Airport for direct access (limited flights).</p>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">Climate</h3>
+                    <p class="text-gray-700">Cool year-round with temperatures averaging 15-23°C (59-73°F). Rainy season is from June to October.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">Baguio<span class="text-yellow-300">City</span></h3>
+                    <p class="max-w-md">Discover the beauty and culture of the Summer Capital of the Philippines</p>
+                </div>
+                <div class="mb-8 md:mb-0">
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-yellow-300 transition">Home</a></li>
+                        <li><a href="#spots" class="hover:text-yellow-300 transition">Tourist Spots</a></li>
+                        <li><a href="#about" class="hover:text-yellow-300 transition">About</a></li>
+                        <li><a href="#contact" class="hover:text-yellow-300 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://facebook.com" class="social-icon bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com" class="social-icon bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com" class="social-icon bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center">
+                <p>&copy; 2025 Group 5. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            if (mobileMenu.style.maxHeight) {
+                mobileMenu.style.maxHeight = null;
+            } else {
+                mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+            }
+        });
+    </script>
+</body>
+</html>
+
